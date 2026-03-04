@@ -1,0 +1,27 @@
+{
+  "name": "youtube-transcript-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that extracts YouTube video transcripts using yt-dlp",
+  "type": "module",
+  "bin": {
+    "youtube-transcript-mcp": "src/index.js"
+  },
+  "files": [
+    "src/"
+  ],
+  "keywords": [
+    "mcp",
+    "youtube",
+    "transcript",
+    "claude",
+    "yt-dlp"
+  ],
+  "author": "Bugra Tiryaki",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
