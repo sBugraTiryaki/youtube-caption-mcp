@@ -1,10 +1,10 @@
 {
-  "name": "youtube-transcript-mcp",
+  "name": "youtube-caption-mcp",
   "version": "1.0.0",
-  "description": "MCP server that extracts YouTube video transcripts using yt-dlp",
+  "description": "MCP server that extracts YouTube video captions using yt-dlp",
   "type": "module",
   "bin": {
-    "youtube-transcript-mcp": "src/index.js"
+    "youtube-caption-mcp": "src/index.js"
   },
   "files": [
     "src/"
@@ -12,6 +12,8 @@
   "keywords": [
     "mcp",
     "youtube",
+    "caption",
+    "subtitle",
     "transcript",
     "claude",
     "yt-dlp"
