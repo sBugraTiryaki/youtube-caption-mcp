@@ -9,16 +9,16 @@ import { fetchTranscript, fetchMetadata } from "./yt-dlp.js";
 import { parseJson3 } from "./parser.js";
 
 const server = new Server(
-  { name: "youtube-transcript", version: "1.0.0" },
+  { name: "youtube-caption", version: "1.0.1" },
   { capabilities: { tools: {} } }
 );
 
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [
     {
-      name: "get_transcript",
+      name: "get_caption",
       description:
-        "Extract transcript from a YouTube video URL or ID",
+        "Extract captions from a YouTube video URL or ID",
       inputSchema: {
         type: "object",
         properties: {
@@ -58,7 +58,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
   try {
     switch (name) {
-      case "get_transcript": {
+      case "get_caption": {
         const { url, lang = "en" } = args;
         const json3 = await fetchTranscript(url, lang);
         const text = parseJson3(json3);
