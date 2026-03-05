@@ -1,6 +1,6 @@
 # youtube-caption-mcp
 
-MCP server that extracts YouTube video captions with timestamps using yt-dlp. Prefers manual subtitles, falls back to auto-generated.
+MCP server that extracts YouTube video captions with timestamps. Prefers manual subtitles, falls back to auto-generated. Zero external dependencies.
 
 ## Quick Start
 
@@ -17,18 +17,6 @@ claude mcp remove youtube-caption
 ## Prerequisite
 
 - Node.js 18+
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-
-```bash
-# macOS
-brew install yt-dlp
-
-# Windows
-winget install yt-dlp
-
-# Linux / pip
-pip install yt-dlp
-```
 
 ## Tools
 
@@ -58,7 +46,7 @@ Returns JSON with title, channel, duration, description, and available subtitle 
 
 ## How it Works
 
-1. Uses yt-dlp to download subtitles in json3 format
+1. Uses YouTube's Innertube API directly (no external tools needed)
 2. Prefers manual subtitles, falls back to auto-generated
 3. Parses json3 into timestamped text
 4. Returns captions directly to Claude (no files saved to disk)

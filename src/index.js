@@ -5,11 +5,11 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
-import { fetchTranscript, fetchMetadata } from "./yt-dlp.js";
+import { fetchTranscript, fetchMetadata } from "./youtube.js";
 import { parseJson3 } from "./parser.js";
 
 const server = new Server(
-  { name: "youtube-caption", version: "1.0.1" },
+  { name: "youtube-caption", version: "2.0.0" },
   { capabilities: { tools: {} } }
 );
 

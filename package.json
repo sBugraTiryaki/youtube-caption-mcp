@@ -1,7 +1,7 @@
 {
   "name": "youtube-caption-mcp",
-  "version": "1.0.1",
-  "description": "MCP server that extracts YouTube video captions using yt-dlp",
+  "version": "2.0.0",
+  "description": "MCP server that extracts YouTube video captions using YouTube Innertube API",
   "type": "module",
   "bin": {
     "youtube-caption-mcp": "src/index.js"
@@ -15,8 +15,7 @@
     "caption",
     "subtitle",
     "transcript",
-    "claude",
-    "yt-dlp"
+    "claude"
   ],
   "author": "Bugra Tiryaki",
   "license": "MIT",
